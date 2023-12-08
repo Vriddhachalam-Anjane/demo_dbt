@@ -1,0 +1,24 @@
+version: 2
+
+
+sources:
+  - name: snowflake_sample_data
+    description:  'A sample db by snowflake that'
+    database: snowflake_sample_data  
+    schema: TPCDS_SF10TCL  
+    tables:
+      - name: store_sales
+        description:  'details for store_sales'
+      # - name: customers
+
+# sources:
+#   - name: jaffle_shop
+#     database: raw  
+#     schema: jaffle_shop  
+#     tables:
+#       - name: orders
+#       - name: customers
+
+#   - name: stripe
+#     tables:
+#       - name: payments

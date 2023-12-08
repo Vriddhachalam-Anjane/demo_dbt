@@ -19,3 +19,43 @@ models:
         tests:
           - unique
           - not_null
+    
+  # - name: teams
+  #   description:  'teams'
+
+  # - name: team_locations
+  #   description: 'seeded team_locations.csv'
+  #   columns:
+  #     - name: id
+  #       description: "The primary key for this table"
+  #       tests:
+  #         - unique
+  #         - not_null
+
+  - name: team_details
+    description: 'NBA team_details'
+    columns:
+      - name: Team
+        description: "Name of the team"
+
+      - name: City
+        description: "City of the team"
+        tests:
+          - is_la_team
+      
+      - name: State
+        description: "State of the team"
+
+# sources:
+#   - name: team_locations
+#     description: 'seeded team_locations.csv'
+    # database: snowflake_sample_data  
+    # schema: TPCDS_SF10TCL  
+    # tables:
+    #   - name: store_sales
+    #     description:  'details for store_sales'
+    # database: snowflake_sample_data  
+    # schema: TPCDS_SF10TCL  
+    # tables:
+    #   - name: team_locations
+    #     description:  'seeded team_locations'

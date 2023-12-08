@@ -6,6 +6,10 @@ name: 'demo'
 version: '1.0.0'
 config-version: 2
 
+
+vars:
+  current_champion: 'Lakers'
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'my-snowflake-db'
 
@@ -34,4 +38,7 @@ models:
   demo:
     # Config indicated by + and applies to all files under models/example/
     example:
-      +materialized: view
+      # +materialized: view
+      +schema: staging
+      +materialized: table
+
